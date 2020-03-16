@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deployment
+  labels:
+    hw2-swe645-0.0.1-SNAPSHOT: tomcat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      hw2-swe645-0.0.1-SNAPSHOT: tomcat
+  template:
+    metadata:
+      labels:
+        hw2-swe645-0.0.1-SNAPSHOT: tomcat
+    spec:
+      containers:
+      - name: tomcat
+        image: mgarkel/jenkins-image:latest
+        ports:
+        - containerPort: 8888
