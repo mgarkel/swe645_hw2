@@ -4,7 +4,7 @@ metadata:
   name: tomcat-service
 spec:
   selector:
-    app: tomcat
+    hw2-swe645-0.0.1-SNAPSHOT: tomcat
   ports:
   - protocol: TCP
     port: 80

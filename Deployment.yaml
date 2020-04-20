@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: tomcat-deployment
   labels:
-    app: tomcat
+    hw2-swe645-0.0.1-SNAPSHOT: tomcat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tomcat
+      hw2-swe645-0.0.1-SNAPSHOT: tomcat
   template:
     metadata:
       labels:
-        app: tomcat
+        hw2-swe645-0.0.1-SNAPSHOT: tomcat
     spec:
       containers:
       - name: tomcat
